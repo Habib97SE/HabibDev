@@ -23,6 +23,10 @@ import {
   linkedin,
   x,
   project1,
+  ju,
+  gotland,
+  destinationgotland,
+  upwork
 } from "../assets";
 
 export const navLinks = [
@@ -33,10 +37,6 @@ export const navLinks = [
   {
     id: "work",
     title: "Work",
-  },
-  {
-    id: "social-media",
-    title: "Social Media",
   },
   {
     id: "contact",
@@ -161,6 +161,53 @@ const experiences = [
       "Participating in code reviews and providing constructive feedback to other developers.",
     ],
   },
+  {
+    title: "Freelancer Web Developer",
+    company_name: "Upwork",
+    icon: upwork,
+    iconBg: "#383E56",
+    date: "October 2023 - Present",
+    points: [
+      "Developing and maintaining web applications using React.js and other related technologies.",
+      "Implementing responsive design and ensuring cross-browser compatibility.",
+    ],
+  },
+  {
+    title: "Study tutor",
+    company_name: "Region Gotland",
+    icon: gotland,
+    iconBg: "#383E56",
+    date: "October 2020 - June 2022",
+    points: [
+      "Provided academic support to students in computer science courses, including Data Structures and Algorithms, Web Development, and Mobile Development.",
+      "Facilitated group discussions and provided one-on-one assistance to students to help them understand complex concepts.",
+      "Graded assignments and provided constructive feedback to students.",
+    ],
+  },
+  {
+    title: "Terminal Staff",
+    company_name: "Destination Gotland",
+    icon: destinationgotland,
+    iconBg: "#383E56",
+    date: "June 2021 - August 2023",
+    points: [
+      "As a terminal staff at Destination Gotland in Visby, I handled customer service tasks such as bookings and check-ins, contributing to an efficient and safe flow of passengers, which strengthened my skills in communication and organization."
+    ]
+  }
+];
+
+const educations = [
+  {
+    title: "Bachelor of Science in computer science: \b Software Development and Mobile Platforms",
+    company_name: "Jönköping University",
+    icon: ju,
+    iconBg: "#383E56",
+    date: "August 2022 - June 2025",
+    points: [
+      "I'm geared up to dive into the tech industry with a robust foundation in computer engineering, honed through my studies in Software Engineering and Mobile Platforms. My education has equipped me with cutting-edge skills in web and mobile app development, emphasizing seamless integration for peak performance and security. Beyond technical prowess, I've cultivated a knack for solving complex problems, embracing creativity, and fostering collaboration. With an eye on the future, I'm ready to contribute to innovative projects or pursue advanced studies, all while understanding the crucial interplay between technology and business processes.",
+      "Relevant courseWork: Data Structures and Algorithms, Web Development, Android Development, iOS Development, Software Engineering, Object Oriented Programming, OOA/D, Databases"
+    ],
+  }
 ];
 
 const testimonials = [
@@ -172,6 +219,7 @@ const testimonials = [
     company: "Acme Co",
     image: "https://randomuser.me/api/portraits/women/4.jpg",
   },
+
   {
     testimonial:
       "I've never met a web developer who truly cares about their clients' success like Rick does.",
@@ -255,4 +303,31 @@ const projects = [
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects, socialLinks };
+
+
+const contact = {
+  title: "Get in Touch",
+  subtitle: "Contact.",
+  description: "I'm always on the lookout for new opportunities and collaborations. Whether you have a project in mind or just want to say hello, don't hesitate to reach out. Fill out the form, so I'll get back to you as soon as possible!",
+  nameLabel: "Name",
+  namePlaceholder: "Your name here...",
+  emailLabel: "Email",
+  emailPlaceholder: "Your email address...",
+  messageLabel: "Message",
+  messagePlaceholder: "Your message here...",
+  buttonLabel: "Send",
+  buttonLabelSending: "Sending...",
+  errorSendingEmail: "Something went wrong, please try again later.",
+  successSendingEmail: "Your message has been sent successfully.",
+  errorInvalidEmail: "Please enter a valid email address.",
+  errorEmptyFields: "Please fill in all fields.",
+  declinePrivacyPolicy: "You have declined our privacy policy. You can't send a message without accepting it.",
+  acceptPrivacyPolicy: "You have accepted our privacy policy.",
+  privacyPolicyDescription: "By submitting your name and email, you consent to allow me to store and use your information for the sole purpose of responding to your inquiry. Your data will be handled in accordance with our privacy practices, ensuring protection and confidentiality. I will not share your information with any third party, and you can request to delete your data at any time.",
+  privacyPolicyTitle: "Privacy Policy",
+  acceptPrivacyPolicyLabel: "Accept",
+  declinePrivacyPolicyLabel: "Decline",
+}
+
+
+export { services, technologies, experiences, testimonials, projects, educations, socialLinks, contact };

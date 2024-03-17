@@ -75,15 +75,20 @@ const About = () => {
 
       <motion.div
         variants={fadeIn("", "", 0.1, 1)}
-        className='mt-4 flex justify-between text-secondary text-[17px]'
+        className='mt-4 flex items-center justify-between text-secondary text-[17px]'
       >
+
         <p
           style={{ display: "inline-block", lineHeight: "2", letterSpacing: "0.5px" }}
           className="w-3/6"
         >
           As a passionate Computer Engineering student from Jönköping University, specializing in Software Development and Mobile Platforms, I bring a blend of academic rigor and practical experience to the tech industry. My work as a Fullstack Developer at Luday AB showcases my skills in creating robust web applications using leading-edge technologies like Python, JavaScript, React.js, and cloud infrastructures. Through my education, I've gained a deep understanding of optimizing code through algorithms and data structures, and the importance of thoughtful software design and architecture. This foundation fuels my drive to innovate and solve complex problems in software development.
         </p>
-        <img src={profile} className="w-1/6" style={{ borderRadius: "50%" }} />
+        <img src={profile} className="w-44 h-44 object-cover rounded-full"
+          onFocus={() => console.log("focused")}
+        />
+
+
       </motion.div>
 
       <div

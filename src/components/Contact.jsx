@@ -2,10 +2,12 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
+
 import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+
 
 
 const PrivacyModal = ({ onClose, onAccept, onDecline }) => {
@@ -13,12 +15,10 @@ const PrivacyModal = ({ onClose, onAccept, onDecline }) => {
     <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
       <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
         <div className="mt-3 text-center">
-          <h3 className="text-lg leading-6 font-medium text-gray-900">Privacy Policy</h3>
+          <h3 className="text-lg leading-6 font-medium text-gray-900">Privacy policy</h3>
           <div className="mt-2 px-7 py-3">
             <p className="text-sm text-gray-500">
-              By submitting your name and email, you consent to allow me to store and use your information for the sole purpose of responding to your inquiry.
-              Your data will be handled in accordance with our privacy practices, ensuring protection and confidentiality. I will not share your information with any third party, and you can request to delete your data at any time.
-
+              By submitting your name and email, you consent to allow me to store and use your information for the sole purpose of responding to your inquiry. Your data will be handled in accordance with our privacy practices, ensuring protection and confidentiality. I will not share your information with any third party, and you can request to delete your data at any time.
             </p>
           </div>
           <div className="items-center px-4 py-3">
@@ -32,12 +32,17 @@ const PrivacyModal = ({ onClose, onAccept, onDecline }) => {
 };
 
 const Contact = () => {
+
+
+
   const formRef = useRef();
   const [form, setForm] = useState({
     name: "",
     email: "",
     message: "",
   });
+
+
 
 
   const [honeypotField, setHonetpotField] = useState("");
@@ -59,7 +64,7 @@ const Contact = () => {
   const handleDecline = () => {
     setAcceptPrivacy(false);
     setShowModal(false);
-    setPrivacyMessage("You have declined our privacy policy. You cannot submit the form.");
+    setPrivacyMessage("You have declined our privacy policy. You can't send a message without accepting it.");
   }
 
   const handleChangeHoneypot = (e) => {
@@ -112,7 +117,7 @@ const Contact = () => {
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       setLoading(false);
       setError(true);
-      setMessage("Please enter a valid email.");
+      setMessage("Please enter a valid email address.");
       return;
     }
 
@@ -137,7 +142,7 @@ const Contact = () => {
         () => {
           setLoading(false);
           setError(false);
-          setMessage("Your message has been sent successfully!");
+          setMessage("Your message has been sent successfully.");
 
           setForm({
             name: "",
@@ -150,12 +155,11 @@ const Contact = () => {
           console.error(error);
 
           setError(true);
-          setMessage("Something went wrong. Please try again later.");
+          setMessage("Something went wrong, please try again later.");
 
         }
       );
   };
-
   return (
     <div
       id="contact"
@@ -165,13 +169,12 @@ const Contact = () => {
         variants={slideIn("left", "tween", 0.2, 1)}
         className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
       >
-        <p className={styles.sectionSubText}>Get in touch</p>
+        <p className={styles.sectionSubText}>Get In Touch</p>
         <h3 className={styles.sectionHeadText}>Contact.</h3>
         <p
           style={{ lineHeight: "2.5", letterSpacing: "0.5px" }}
         >
-          I'm always on the lookout for new opportunities and collaborations. Whether you have a project in mind or just want to say hello,
-          don't hesitate to reach out. Fill out the form, so I'll get back to you as soon as possible!
+          I'm always on the lookout for new opportunities and collaborations. Whether you have a project in mind or just want to say hello, don't hesitate to reach out. Fill out the form, so I'll get back to you as soon as possible!
         </p>
         <form
           ref={formRef}
@@ -179,10 +182,9 @@ const Contact = () => {
           className='mt-12 flex flex-col gap-8'
         >
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
+            <span className='text-white7 font-medium mb-4'>Name</span>
             <input
               type='text'
-              name='name'
               value={form.name}
               onChange={handleChange}
               placeholder="Your name here..."
@@ -190,30 +192,32 @@ const Contact = () => {
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
+            <span className='text-white font-medium mb-4'>E-mail</span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder="Your email address"
+              placeholder={"Your email address..."}
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
           <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
+            <span className='text-white font-medium mb-4'>Message</span>
             <textarea
               rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='Your message here...'
+              placeholder={"Your message here..."}
               className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
             />
           </label>
 
           <label className='flex items-center gap-4'>
-            <span className="text-white font-medium text-center" onClick={() => setShowModal(true)}>Read and accept our privacy policy.</span>
+            <span
+              style={{ cursor: "pointer", borderBottom: "1px solid #fff" }}
+              className="text-white font-medium text-center" onClick={() => setShowModal(true)}>Read and accept our privacy policy.</span>
           </label>
 
 
@@ -229,7 +233,7 @@ const Contact = () => {
             type='submit'
             className='bg-tertiary py-3 px-8 rounded-xl outline-none w-full text-white font-bold shadow-md shadow-primary hover:shadow-lg hover:bg-black transition-all duration-300 ease-in-out'
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? "Sending ..." : "Send"}
           </button>
         </form>
 
@@ -279,7 +283,6 @@ const Contact = () => {
         />
       )}
     </div>
-
   );
 };
 

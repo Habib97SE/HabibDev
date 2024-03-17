@@ -1,0 +1,26 @@
+{
+    "title": "Hello, world",
+    "contact": {
+        "title": "Get in Touch",
+        "subtitle": "Contact.",
+        "description": "I'm always on the lookout for new opportunities and collaborations. Whether you have a project in mind or just want to say hello, don't hesitate to reach out. Fill out the form, so I'll get back to you as soon as possible!",
+        "nameLabel": "Name",
+        "namePlaceholder": "Your name here...",
+        "emailLabel": "Email",
+        "emailPlaceholder": "Your email address...",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Your message here...",
+        "buttonLabel": "Send",
+        "buttonLabelSending": "Sending...",
+        "errorSendingEmail": "Something went wrong, please try again later.",
+        "successSendingEmail": "Your message has been sent successfully.",
+        "errorInvalidEmail": "Please enter a valid email address.",
+        "errorEmptyFields": "Please fill in all fields.",
+        "declinePrivacyPolicy": "You have declined our privacy policy. You can't send a message without accepting it.",
+        "acceptPrivacyPolicy": "You have accepted our privacy policy.",
+        "privacyPolicyDescription": "By submitting your name and email, you consent to allow me to store and use your information for the sole purpose of responding to your inquiry. Your data will be handled in accordance with our privacy practices, ensuring protection and confidentiality. I will not share your information with any third party, and you can request to delete your data at any time.",
+        "privacyPolicyTitle": "Privacy Policy",
+        "acceptPrivacyPolicyLabel": "Accept",
+        "declinePrivacyPolicyLabel": "Decline"
+    }
+}

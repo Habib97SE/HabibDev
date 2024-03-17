@@ -9,6 +9,7 @@ import Feedbacks from "./Feedbacks";
 import Contact from "./Contact";
 import CanvasLoader from "./Loader";
 import SocialMedia from './SocialMedia';
+import Educations from './Educations';
 
 
 export {
@@ -21,9 +22,10 @@ export {
   Feedbacks,
   Contact,
   SocialMedia,
+  Educations,
   CanvasLoader,
-  EarthCanvas, 
-  BallCanvas, 
-  ComputersCanvas, 
+  EarthCanvas,
+  BallCanvas,
+  ComputersCanvas,
   StarsCanvas
 };

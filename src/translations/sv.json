@@ -1,0 +1,26 @@
+{
+    "title": "Hej världen!",
+    "contact": {
+        "title": "Komma i kontakt",
+        "subtitle": "Kontakta mig",
+        "description": "Jag är alltid på jakt efter nya möjligheter och samarbeten. Oavsett om du har ett projekt i åtanke eller bara vill säga hej, tveka inte att höra av dig. Fyll i formuläret så återkommer jag till dig så snart som möjligt!",
+        "nameLabel": "Namn",
+        "namePlaceholder": "Ditt namn ...",
+        "emailLabel": "E-post",
+        "emailPlaceholder": "Din e-post adress ...",
+        "messageLabel": "Meddelande",
+        "messagePlaceholder": "Ditt meddelande ...",
+        "buttonLabel": "Skicka",
+        "buttonLabelSending": "Skickar ...",
+        "errorSendingEmail": "Något gick fel. Försök igen senare.",
+        "successSendingEmail": "Ditt meddelande har skickats!",
+        "errorInvalidEmail": "Ogiltig e-postadress.",
+        "errorEmptyFields": "Fyll i alla fält.",
+        "declinePrivacyPolicy": "För att skicka ditt meddelande måste du acceptera vår integritetspolicy.",
+        "acceptPrivacyPolicy": "Du har accepterat vår integritetspolicy. Tack!",
+        "privacyPolicyDescription": "Genom att skicka in ditt namn och din e-postadress samtycker du till att jag kan lagra och använda din information i det enda syftet att svara på din förfrågan. Dina uppgifter kommer att hanteras i enlighet med vår sekretesspraxis, vilket säkerställer skydd och konfidentialitet. Jag kommer inte att dela din information med någon tredje part, och du kan när som helst begära att få radera dina uppgifter.",
+        "privacyPolicyTitle": "Privacy Policy",
+        "acceptPrivacyPolicyLabel": "Acceptera",
+        "declinePrivacyPolicyLabel": "Neka"
+    }
+}

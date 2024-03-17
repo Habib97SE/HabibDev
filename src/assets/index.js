@@ -24,6 +24,10 @@ import swift from "./tech/swift.jpeg"
 import springboot from "./tech/spring-boot.png"
 
 import luday from "./company/luday.jpeg";
+import ju from "./company/ju.png"
+import gotland from "./company/gotland.png"
+import destinationgotland from "./company/destinationgotland.jpeg"
+import upwork from "./company/upwork.svg"
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
@@ -67,5 +71,9 @@ export {
   linkedin,
   x,
   project1,
-  profile
+  profile,
+  ju,
+  gotland,
+  destinationgotland,
+  upwork
 };
