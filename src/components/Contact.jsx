@@ -7,6 +7,30 @@ import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
 
+
+const PrivacyModal = ({ onClose, onAccept, onDecline }) => {
+  return (
+    <div className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full">
+      <div className="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+        <div className="mt-3 text-center">
+          <h3 className="text-lg leading-6 font-medium text-gray-900">Privacy Policy</h3>
+          <div className="mt-2 px-7 py-3">
+            <p className="text-sm text-gray-500">
+              By submitting your name and email, you consent to allow me to store and use your information for the sole purpose of responding to your inquiry.
+              Your data will be handled in accordance with our privacy practices, ensuring protection and confidentiality. I will not share your information with any third party, and you can request to delete your data at any time.
+
+            </p>
+          </div>
+          <div className="items-center px-4 py-3">
+            <button id="acceptBtn" className="mx-2 px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-20 shadow-sm hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-opacity-50" onClick={onAccept}>Accept</button>
+            <button id="declineBtn" className="mx-2 px-4 py-2 bg-red-500 text-white text-base font-medium rounded-md w-20 shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-opacity-50" onClick={onDecline}>Decline</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -15,10 +39,28 @@ const Contact = () => {
     message: "",
   });
 
+
   const [honeypotField, setHonetpotField] = useState("");
 
   const [message, setMessage] = useState("");
   const [error, setError] = useState(false);
+
+  const [showModal, setShowModal] = useState(false);
+  const [acceptPrivacy, setAcceptPrivacy] = useState(false);
+  const [privacyMessage, setPrivacyMessage] = useState("");
+
+
+  const handleAccept = () => {
+    setAcceptPrivacy(true);
+    setShowModal(false);
+    setPrivacyMessage("You have accepted our privacy policy.");
+  }
+
+  const handleDecline = () => {
+    setAcceptPrivacy(false);
+    setShowModal(false);
+    setPrivacyMessage("You have declined our privacy policy. You cannot submit the form.");
+  }
 
   const handleChangeHoneypot = (e) => {
     setHonetpotField(e.target.value);
@@ -44,6 +86,16 @@ const Contact = () => {
 
     // Honeypot field, if filled, it's a bot
     if (honeypotField) {
+      return;
+    }
+
+    if (privacyMessage.length > 0) {
+      setPrivacyMessage("");
+    }
+
+    // check if concent checkvox is checked 
+    if (!acceptPrivacy) {
+      setShowModal(true);
       return;
     }
 
@@ -160,6 +212,11 @@ const Contact = () => {
             />
           </label>
 
+          <label className='flex items-center gap-4'>
+            <span className="text-white font-medium text-center" onClick={() => setShowModal(true)}>Read and accept our privacy policy.</span>
+          </label>
+
+
           <input
             type="text"
             name="honeypot"
@@ -192,6 +249,21 @@ const Contact = () => {
           )}
         </div>
 
+        <div
+          className='mt-8'
+        >
+          {privacyMessage.length > 0 && (
+            <div
+              style={{
+                padding: "1rem",
+                borderRadius: "0.5rem"
+              }}
+              className={`text-white text-center ${acceptPrivacy ? "bg-green-500" : "bg-red-600"}`}>
+              {privacyMessage}
+            </div>
+          )}
+        </div>
+
       </motion.div>
 
       <motion.div
@@ -200,7 +272,14 @@ const Contact = () => {
       >
         <EarthCanvas />
       </motion.div>
+      {showModal && (
+        <PrivacyModal
+          onAccept={handleAccept}
+          onDecline={handleDecline}
+        />
+      )}
     </div>
+
   );
 };
 

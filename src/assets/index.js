@@ -32,6 +32,8 @@ import tripguide from "./tripguide.png";
 import linkedin from "./linkedin.svg";
 import x from "./x.webp"
 
+import profile from "./profile.jpeg"
+
 import project1 from "./project-1.png"
 
 export {
@@ -64,5 +66,6 @@ export {
   springboot,
   linkedin,
   x,
-  project1
+  project1,
+  profile
 };
