@@ -26,11 +26,12 @@ import {
   ju,
   gotland,
   destinationgotland,
-  upwork
+  upwork,
+  ChapterChaser,
+  Jonkoping
 } from "../assets";
 
-export const navLinks = [
-  {
+export const navLinks = [{
     id: "about",
     title: "About",
   },
@@ -44,8 +45,7 @@ export const navLinks = [
   },
 ];
 
-const socialLinks = [
-  {
+const socialLinks = [{
     id: 1,
     title: "GitHub",
     link: "https://github.com/Habib97SE",
@@ -72,8 +72,7 @@ const socialLinks = [
 ]
 
 
-const services = [
-  {
+const services = [{
     title: "Frontend Developer",
     icon: web,
     description: "I can build scalable and responsive web applications using modern web technologies like React.js, Next.js, and Tailwind CSS."
@@ -95,8 +94,7 @@ const services = [
   },
 ];
 
-const technologies = [
-  {
+const technologies = [{
     name: "JavaScript",
     icon: javascript,
   },
@@ -147,8 +145,7 @@ const technologies = [
 
 ];
 
-const experiences = [
-  {
+const experiences = [{
     title: "Fullstack Developer",
     company_name: "Luday AB",
     icon: luday,
@@ -196,24 +193,20 @@ const experiences = [
   }
 ];
 
-const educations = [
-  {
-    title: "Bachelor of Science in computer science: \b Software Development and Mobile Platforms",
-    company_name: "Jönköping University",
-    icon: ju,
-    iconBg: "#383E56",
-    date: "August 2022 - June 2025",
-    points: [
-      "I'm geared up to dive into the tech industry with a robust foundation in computer engineering, honed through my studies in Software Engineering and Mobile Platforms. My education has equipped me with cutting-edge skills in web and mobile app development, emphasizing seamless integration for peak performance and security. Beyond technical prowess, I've cultivated a knack for solving complex problems, embracing creativity, and fostering collaboration. With an eye on the future, I'm ready to contribute to innovative projects or pursue advanced studies, all while understanding the crucial interplay between technology and business processes.",
-      "Relevant courseWork: Data Structures and Algorithms, Web Development, Android Development, iOS Development, Software Engineering, Object Oriented Programming, OOA/D, Databases"
-    ],
-  }
-];
+const educations = [{
+  title: "Bachelor of Science in computer science: \b Software Development and Mobile Platforms",
+  company_name: "Jönköping University",
+  icon: ju,
+  iconBg: "#383E56",
+  date: "August 2022 - June 2025",
+  points: [
+    "I'm geared up to dive into the tech industry with a robust foundation in computer engineering, honed through my studies in Software Engineering and Mobile Platforms. My education has equipped me with cutting-edge skills in web and mobile app development, emphasizing seamless integration for peak performance and security. Beyond technical prowess, I've cultivated a knack for solving complex problems, embracing creativity, and fostering collaboration. With an eye on the future, I'm ready to contribute to innovative projects or pursue advanced studies, all while understanding the crucial interplay between technology and business processes.",
+    "Relevant courseWork: Data Structures and Algorithms, Web Development, Android Development, iOS Development, Software Engineering, Object Oriented Programming, OOA/D, Databases"
+  ],
+}];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
+const testimonials = [{
+    testimonial: "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
     name: "Sara Lee",
     designation: "CFO",
     company: "Acme Co",
@@ -221,16 +214,14 @@ const testimonials = [
   },
 
   {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
+    testimonial: "I've never met a web developer who truly cares about their clients' success like Rick does.",
     name: "Chris Brown",
     designation: "COO",
     company: "DEF Corp",
     image: "https://randomuser.me/api/portraits/men/5.jpg",
   },
   {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
+    testimonial: "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
     name: "Lisa Wang",
     designation: "CTO",
     company: "456 Enterprises",
@@ -238,70 +229,65 @@ const testimonials = [
   },
 ];
 
-const projects = [
-  {
-    name: "Interactive Developer's Showcase:",
+const projects = [{
+    name: "Interactive Developer's Showcase",
     description: "A personal portfolio that goes beyond the ordinary, crafted with React.js and styled with Tailwind CSS. This site is not just a resume but an immersive experience, powered by Three.js to display my projects in 3D, showcasing my skills and the creative solutions I bring to web development.",
-    tags: [
-      {
+    tags: [{
         name: "react.js",
-        color: "blue-text-gradient",
+        color: "text-blue-500",
       },
       {
         name: "three.js",
-        color: "green-text-gradient",
+        color: "text-green-500",
       },
       {
         name: "tailwindcss",
-        color: "pink-text-gradient",
+        color: "text-teal-500",
       },
     ],
     image: project1,
-    source_code_link: "https://github.com/",
+    source_code_link: "https://github.com/Habib97SE/HabibDev",
   },
   {
-    name: "Job IT",
-    description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
-    tags: [
-      {
-        name: "react",
-        color: "blue-text-gradient",
+    name: "Chapter Chaser",
+    description: "Chapter Chaser is a SwiftUI-based iOS app designed to help book enthusiasts discover, organize, and track their reading.",
+    tags: [{
+        name: "swift",
+        color: "text-orange-500",
       },
       {
-        name: "restapi",
-        color: "green-text-gradient",
+        name: "swiftui",
+        color: "text-purple-500",
       },
       {
-        name: "scss",
-        color: "pink-text-gradient",
+        name: "API Integration",
+        color: "text-pink-500",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: ChapterChaser,
+    source_code_link: "https://github.com/Habib97SE/Chapter-Chaser",
   },
   {
-    name: "Trip Guide",
-    description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
+    name: "JKPG City",
+    description: "A web application that helps users discover the best places to visit in Jönköping, Sweden. Users can explore the city's attractions, restaurants, and events, all in one place.",
+    tags: [{
+        name: "react.js",
+        color: "text-blue-500",
       },
       {
-        name: "supabase",
-        color: "green-text-gradient",
+        name: "Express.js",
+        color: "text-yellow-500",
       },
       {
-        name: "css",
-        color: "pink-text-gradient",
+        name: "MySQL",
+        color: "text-blue-700",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: Jonkoping,
+    source_code_link: "https://github.com/Habib97SE/jkpgcity",
   },
 ];
+
 
 
 
@@ -330,4 +316,13 @@ const contact = {
 }
 
 
-export { services, technologies, experiences, testimonials, projects, educations, socialLinks, contact };
+export {
+  services,
+  technologies,
+  experiences,
+  testimonials,
+  projects,
+  educations,
+  socialLinks,
+  contact
+};

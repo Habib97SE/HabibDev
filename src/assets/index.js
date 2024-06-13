@@ -39,6 +39,8 @@ import x from "./x.webp"
 import profile from "./profile.jpeg"
 
 import project1 from "./project-1.png"
+import ChapterChaser from "./chapter-chaser.jpg";
+import Jonkoping from "./jonkoping.webp"
 
 export {
   logo,
@@ -75,5 +77,7 @@ export {
   ju,
   gotland,
   destinationgotland,
-  upwork
+  upwork,
+  ChapterChaser,
+  Jonkoping
 };
