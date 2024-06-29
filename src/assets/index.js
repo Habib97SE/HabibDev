@@ -41,6 +41,8 @@ import profile from "./profile.jpeg"
 import project1 from "./project-1.png"
 import ChapterChaser from "./chapter-chaser.jpg";
 import Jonkoping from "./jonkoping.webp"
+import ProjectDietMonitor from "./project-dietmonitor.png"
+import ProjectTicTacToe from "./project-tictactoe.jpg"
 
 export {
   logo,
@@ -79,5 +81,7 @@ export {
   destinationgotland,
   upwork,
   ChapterChaser,
-  Jonkoping
+  Jonkoping,
+  ProjectDietMonitor,
+  ProjectTicTacToe
 };

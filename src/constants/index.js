@@ -28,7 +28,9 @@ import {
   destinationgotland,
   upwork,
   ChapterChaser,
-  Jonkoping
+  Jonkoping,
+  ProjectDietMonitor,
+  ProjectTicTacToe
 } from "../assets";
 
 export const navLinks = [{
@@ -146,27 +148,16 @@ const technologies = [{
 ];
 
 const experiences = [{
-    title: "Fullstack Developer",
+    title: "Fullstack Developer (Intern)",
     company_name: "Luday AB",
     icon: luday,
     iconBg: "#383E56",
-    date: "March 2024 - Present",
+    date: "March 2024 - May 2024",
     points: [
       "Developing and maintaining web applications using React.js and other related technologies.",
       "Collaborating with cross-functional teams, including designers, product managers, and other developers, to create high-quality products, employing Agile methodologies to ensure adaptability and efficient project progression.",
       "Implementing responsive design and ensuring cross-browser compatibility.",
       "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Freelancer Web Developer",
-    company_name: "Upwork",
-    icon: upwork,
-    iconBg: "#383E56",
-    date: "October 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
     ],
   },
   {
@@ -230,27 +221,8 @@ const testimonials = [{
 ];
 
 const projects = [{
-    name: "Interactive Developer's Showcase",
-    description: "A personal portfolio that goes beyond the ordinary, crafted with React.js and styled with Tailwind CSS. This site is not just a resume but an immersive experience, powered by Three.js to display my projects in 3D, showcasing my skills and the creative solutions I bring to web development.",
-    tags: [{
-        name: "react.js",
-        color: "text-blue-500",
-      },
-      {
-        name: "three.js",
-        color: "text-green-500",
-      },
-      {
-        name: "tailwindcss",
-        color: "text-teal-500",
-      },
-    ],
-    image: project1,
-    source_code_link: "https://github.com/Habib97SE/HabibDev",
-  },
-  {
     name: "Chapter Chaser",
-    description: "Chapter Chaser is a SwiftUI-based iOS app designed to help book enthusiasts discover, organize, and track their reading.",
+    description: "Chapter Chaser is a SwiftUI-based iOS app designed to help book enthusiasts discover, organize, and track their reading. You can search for books, add them to your library, and track your reading progress. The app also provides personalized recommendations based on your reading history.",
     tags: [{
         name: "swift",
         color: "text-orange-500",
@@ -269,7 +241,7 @@ const projects = [{
   },
   {
     name: "JKPG City",
-    description: "A web application that helps users discover the best places to visit in Jönköping, Sweden. Users can explore the city's attractions, restaurants, and events, all in one place.",
+    description: "A web application that helps users discover the best places to visit in Jönköping, Sweden. Users can explore the city's attractions, restaurants, and events, all in one place. The app also provides a map view to help users navigate the city easily.",
     tags: [{
         name: "react.js",
         color: "text-blue-500",
@@ -282,10 +254,72 @@ const projects = [{
         name: "MySQL",
         color: "text-blue-700",
       },
+      {
+        name: "Bootstrap",
+        color: "text-purple-500",
+      },
+      {
+        name: "Google Maps API",
+        color: "text-red-500",
+      },
+      {
+        name: "Data Visualization",
+        color: "text-green-500",
+      }
     ],
     image: Jonkoping,
     source_code_link: "https://github.com/Habib97SE/jkpgcity",
   },
+  {
+    name: "Diet Monitor",
+    description: "Diet Monitor is a mobile app and website that helps users track their daily food intake and monitor their nutritional goals. Users can set daily calorie limits and track their progress over time. The app also provides personalized recommendations based on the user's dietary preferences.",
+    tags: [{
+        name: "react.js",
+        color: "text-blue-500",
+      },
+      {
+        name: "Next.js",
+        color: "text-black",
+      },
+      {
+        name: "Chart.js",
+        color: "text-yellow-500",
+      },
+      {
+        name: "MySQL",
+        color: "text-blue-700",
+      },
+      {
+        name: "Spring Boot",
+        color: "text-green-700",
+      },
+      {
+        name: "Swift",
+        color: "text-orange-500",
+      },
+    ],
+    image: ProjectDietMonitor,
+    source_code_link: "https://github.com/Habib97SE/DietMonitor",
+  },
+  {
+    name: "Tic Tac Toe",
+    description: "A simple Tic Tac Toe game built with Kotlin and Jetpack Composer. The game features online multiplayer mode, single-player mode against AI, and local multiplayer mode. The app uses Supabase as the backend service to store game data and manage user authentication.",
+    tags: [{
+        name: "Kotlin",
+        color: "text-blue-500",
+      },
+      {
+        name: "Jetpack",
+        color: "text-black",
+      },
+      {
+        name: "Supabase",
+        color: "text-yellow-500",
+      },
+    ],
+    image: ProjectTicTacToe,
+    source_code_link: "https://github.com/Habib97SE/tictactoe",
+  }
 ];
 
 
